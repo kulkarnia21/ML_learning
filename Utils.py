@@ -59,6 +59,6 @@ def perceptron_w_offset(input_array, T):
                 offset = offset + y_i
                 print('updated on i = ' + str(i), ' t = ' + str(t))
     # This function returns theta
-    # theta describes a vector normal to a linear classifier, in this case specifically a plane that passes through origin (0,0)
+    # theta describes a vector normal to a linear classifier
     # offset describes the distance from origin to the plane
     return theta, offset
