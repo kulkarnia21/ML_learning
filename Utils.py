@@ -20,6 +20,7 @@ def perceptron(input_array, T):
             # print(x_i)
             y_i = input_array[i][-1]
             # print(y_i)
+            
             ##### check if guess is correct, update if incorrect
             if y_i * np.dot(theta, x_i) <= 0:
                 theta = theta + y_i * x_i
