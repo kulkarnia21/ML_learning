@@ -14,17 +14,20 @@ def perceptron(input_array, T):
             print('i = ' + str(i) + '| t = ' + str(t))
             print(theta)
             # print(input_array[i])
-            
+
             ##### Separate input array into x_i (inputs) and y_i (expected output)
             x_i = input_array[i][:-1]
             # print(x_i)
             y_i = input_array[i][-1]
             # print(y_i)
-            
             ##### check if guess is correct, update if incorrect
             if y_i * np.dot(theta, x_i) <= 0:
                 theta = theta + y_i * x_i
                 print('updated on i = ' + str(i), ' t = ' + str(t))
+                
+    # This function returns theta
+    # theta describes a vector normal to a linear classifier, in this case specifically a plane that passes through origin (0,0)
+    return theta
 
                 
 perceptron(tst, 2)
